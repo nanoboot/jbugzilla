@@ -1,0 +1,174 @@
+<!--
+ JBugzilla.
+ Copyright (C) 2023-2023 the original author or authors.
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; version 2
+ of the License only.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+-->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.nanoboot.jbugzilla</groupId>
+        <artifactId>jbugzilla-parent</artifactId>
+        <version>5.0.6-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>jbugzilla-web</artifactId>
+    <packaging>war</packaging>
+    <name>jbugzilla Web</name>
+    <description>Web jbugzilla</description>
+    <properties>
+        <jackson.library>2.9.4</jackson.library>
+        <log4j2.version>2.17.0</log4j2.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.library}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.11.2</version>
+        </dependency>
+        
+        <!-- Lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+<!--        <dependency>
+            <groupId>org.nanoboot.jbugzilla</groupId>
+            <artifactId>jbugzilla-entity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.nanoboot.jbugzilla</groupId>
+            <artifactId>jbugzilla-persistence-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.nanoboot.jbugzilla</groupId>
+            <artifactId>jbugzilla-persistence-impl-mock</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.nanoboot.jbugzilla</groupId>
+            <artifactId>jbugzilla-persistence-impl-sqlite</artifactId>
+        </dependency>-->
+        
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+
+
+            
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework</groupId>-->
+        <!--            <artifactId>spring-dao</artifactId>-->
+        <!--            <version>2.0.8</version>-->
+        <!--        </dependency>-->
+        <!--        &lt;!&ndash;        logging&ndash;&gt;-->
+
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.logging.log4j</groupId>-->
+        <!--            <artifactId>log4j-slf4j-impl</artifactId>-->
+        <!--            <version>2.11.2</version>-->
+        <!--        </dependency>-->
+    </dependencies>
+    <repositories>
+
+    </repositories>
+</project>

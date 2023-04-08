@@ -1,0 +1,45 @@
+<!--
+ JBugzilla.
+ Copyright (C) 2023-2023 the original author or authors.
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; version 2
+ of the License only.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+-->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!--    <bean id="userBo" class="com.mkyong.user.bo.api.UserBoImpl" />-->
+
+    <!--    <bean id="userSpringAction" class="com.mkyong.user.action.UserSpringAction">-->
+    <!--        <property name="userBo" ref="userBo" />-->
+    <!--    </bean>-->
+    <bean id="secretText" class="java.lang.String">
+        <constructor-arg value="abc123"/>
+    </bean>
+
+<!--<bean id="websiteRepoImplMock" class="org.nanoboot.jbugzilla.persistence.impl.mock.WebsiteRepoImplMock"></bean>
+<bean id="variantRepoImplMock" class="org.nanoboot.jbugzilla.persistence.impl.mock.VariantRepoImplMock"></bean>
+
+
+<bean id="sqliteConnectionFactory" class="org.nanoboot.jbugzilla.persistence.impl.sqlite.SqliteConnectionFactory"></bean>
+<bean id="websiteRepoImplSqlite" class="org.nanoboot.jbugzilla.persistence.impl.sqlite.WebsiteRepoImplSqlite">
+    <property name="sqliteConnectionFactory" ref="sqliteConnectionFactory" />
+</bean>
+<bean id="variantRepoImplSqlite" class="org.nanoboot.jbugzilla.persistence.impl.sqlite.VariantRepoImplSqlite">
+    <property name="sqliteConnectionFactory" ref="sqliteConnectionFactory" />
+</bean>-->
+
+</beans>
