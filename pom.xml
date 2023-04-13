@@ -37,7 +37,7 @@
     <name>jbugzilla</name>
     <description>jbugzilla</description>
     <modules>
-<!--        <module>jbugzilla-entity</module>
+        <!--        <module>jbugzilla-entity</module>
         <module>jbugzilla-persistence-apil</module>
         <module>jbugzilla-persistence-impl-mock</module>
         <module>jbugzilla-persistence-impl-sqlite</module>-->
@@ -50,7 +50,7 @@
         <jbugzilla.version>5.0.6-SNAPSHOT</jbugzilla.version>
         <power.version>2.0.0-SNAPSHOT</power.version>
         <log4j.version>2.17.0</log4j.version>
-        <springframework.version>5.3.17</springframework.version>
+        <springframework.version>6.0.7</springframework.version>
         <checkstyle.skip>true</checkstyle.skip><!-- TODO: make false-->
         <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
         <db-migration-core.version>0.1.0-SNAPSHOT</db-migration-core.version>
@@ -195,7 +195,7 @@
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
-<!--            <version>${sqlite-jdbc.version}</version>-->
+            <!--            <version>${sqlite-jdbc.version}</version>-->
             <version>3.41.2.1</version>
         </dependency>
             
@@ -235,7 +235,7 @@
                 <artifactId>spring-context</artifactId>
                 <version>${springframework.version}</version>
             </dependency>
-<!--
+            <!--
              JBugzilla modules 
             <dependency>
                 <groupId>org.nanoboot.jbugzilla</groupId>
@@ -316,10 +316,12 @@
             </dependency>
 
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>3.1.0</version>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-web-api</artifactId>
+                <version>9.1.0</version>
+                <scope>provided</scope>
             </dependency>
+
 
         </dependencies>
     </dependencyManagement>

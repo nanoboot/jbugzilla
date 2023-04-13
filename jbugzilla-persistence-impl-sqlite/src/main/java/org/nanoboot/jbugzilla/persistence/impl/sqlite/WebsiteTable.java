@@ -16,19 +16,28 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 ///////////////////////////////////////////////////////////////////////////////////////////////
+package org.nanoboot.jbugzilla.persistence.impl.sqlite;
 
 /**
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
- * @since 0.0.0
+ * @author robertvokac
  */
-module jbugzilla.web {
-//    requires jbugzilla.entity;
-//    requires jbugzilla.persistence.api;
-//    requires jbugzilla.persistence.impl.mock;
-    requires jakarta.jakartaee.web.api;
-    requires spring.context;
-    requires lombok;
-    requires spring.web;
-    requires org.xerial.sqlitejdbc;
+public class WebsiteTable {
+    public static final String TABLE_NAME = "WEBSITE";
+    
+    public static final String NUMBER = "NUMBER";
+    public static final String URL = "URL";
+    public static final String WEB_ARCHIVE_SNAPSHOT = "WEB_ARCHIVE_SNAPSHOT";
+    public static final String LANGUAGE = "LANGUAGE";
+    //
+    public static final String DOWNLOADED = "DOWNLOADED";
+    public static final String FORMATTED = "FORMATTED";
+    public static final String VERIFIED = "VERIFIED";
+    public static final String VARIANT_NUMBER = "VARIANT_NUMBER";
+    
+    
+    private WebsiteTable() {
+        //Not meant to be instantiated.
+    }
+    
 }

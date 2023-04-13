@@ -17,18 +17,32 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+package org.nanoboot.jbugzilla.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.ToString;
+
+
 /**
  *
  * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
  * @since 0.0.0
  */
-module jbugzilla.web {
-//    requires jbugzilla.entity;
-//    requires jbugzilla.persistence.api;
-//    requires jbugzilla.persistence.impl.mock;
-    requires jakarta.jakartaee.web.api;
-    requires spring.context;
-    requires lombok;
-    requires spring.web;
-    requires org.xerial.sqlitejdbc;
+@Data
+@AllArgsConstructor
+@ToString
+public class Website {
+
+    private Integer number;
+    private String url;
+    private String webArchiveSnapshot;
+    private String language;
+    private Boolean downloaded;
+    private Boolean formatted;
+    private Boolean verified;
+    private Integer variantNumber;
+    public Boolean getDeadUrl() {
+        return this.webArchiveSnapshot != null;
+    }
 }

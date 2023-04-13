@@ -16,19 +16,33 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 ///////////////////////////////////////////////////////////////////////////////////////////////
+package org.nanoboot.jbugzilla.persistence.impl.sqlite;
 
 /**
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
- * @since 0.0.0
+ * @author robertvokac
  */
-module jbugzilla.web {
-//    requires jbugzilla.entity;
-//    requires jbugzilla.persistence.api;
-//    requires jbugzilla.persistence.impl.mock;
-    requires jakarta.jakartaee.web.api;
-    requires spring.context;
-    requires lombok;
-    requires spring.web;
-    requires org.xerial.sqlitejdbc;
+public class VariantTable {
+    public static final String TABLE_NAME = "VARIANT";
+    
+    public static final String NUMBER = "NUMBER";
+    public static final String NAME = "NAME";
+    public static final String NOTE = "NOTE";
+    public static final String STATUS = "STATUS";
+    public static final String AUTHOR = "AUTHOR";
+    
+    public static final String LICENCE = "LICENCE";
+    public static final String OPEN_SOURCE = "OPEN_SOURCE";
+    public static final String USER_INTERFACE = "USER_INTERFACE";
+    public static final String PROGRAMMING_LANGUAGE = "PROGRAMMING_LANGUAGE";
+    public static final String BINARIES = "BINARIES";
+    
+    public static final String LAST_UPDATE = "LAST_UPDATE";
+    public static final String LAST_VERSION = "LAST_VERSION";
+    
+    
+    private VariantTable() {
+        //Not meant to be instantiated.
+    }
+    
 }

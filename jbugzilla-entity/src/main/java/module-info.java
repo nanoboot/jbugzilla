@@ -22,13 +22,17 @@
  * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
  * @since 0.0.0
  */
-module jbugzilla.web {
-//    requires jbugzilla.entity;
-//    requires jbugzilla.persistence.api;
-//    requires jbugzilla.persistence.impl.mock;
-    requires jakarta.jakartaee.web.api;
-    requires spring.context;
+module jbugzilla.entity {
+    exports org.nanoboot.jbugzilla.entity;
+
+    requires java.sql;
+    requires spring.jdbc;
+    requires powerframework.json;
+    requires powerframework.time;
+    requires powerframework.utils;
+    requires powerframework.reflection;
+    requires powerframework.sql;
     requires lombok;
-    requires spring.web;
-    requires org.xerial.sqlitejdbc;
+    requires org.apache.logging.log4j.core;
+    requires org.apache.logging.log4j;
 }

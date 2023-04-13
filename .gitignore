@@ -20,3 +20,4 @@
 
 jbugzilla.confpath/*
 
+/target/
